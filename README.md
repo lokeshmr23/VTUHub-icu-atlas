@@ -19,7 +19,10 @@ python app.py
 Open `http://localhost:8000`. The live preview in this workspace runs on port 8000, bound to `0.0.0.0`.
 
 Demo login: `demo@icuatlas.app` / `demo1234`. Or register a new user for an empty workspace. SQLite data and the signing secret persist in `instance/`. For a deployment outside a local demo, replace the development server with a production WSGI setup, configure HTTPS, secure secret management, account recovery, audit logs and appropriate data-governance review. The demo credential must never be used in production.
+For the demo workspace:
 
+Email: demo@icuatlas.app
+Password: demo1234
 ## Research data pairing (proposal only)
 
 - **Primary candidate:** MIMIC-IV v3.1, single-center US hospital/ICU EHR; credentialed access: https://physionet.org/content/mimiciv/3.1/
