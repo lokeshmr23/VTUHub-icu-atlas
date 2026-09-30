@@ -1,0 +1,37 @@
+# Local runtime state: contains the demo database and Flask signing secret.
+instance/
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.db
+
+# Private research data / restricted exports. Never commit MIMIC/eICU records.
+data/
+private/
+uploads/
+*.parquet
+*.feather
+*.arrow
+*.pkl
+*.csv
+*.tsv
+*.gz
+
+# Credentials and local configuration.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+
+# Python and editor artifacts.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.DS_Store
+.idea/
+.vscode/
+*.log

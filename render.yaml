@@ -1,0 +1,15 @@
+# Render Blueprint for a public DEMO only.
+# Free Render services have ephemeral filesystems: SQLite accounts and edits reset
+# on spin-down, restart or redeploy. For durable data, use a paid persistent disk
+# with ICU_ATLAS_DATA_DIR=/var/data (configured separately in the Render UI).
+services:
+  - type: web
+    name: vtuhub-icu-atlas
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 90
+    healthCheckPath: /healthz
+    envVars:
+      - key: ICU_ATLAS_SECRET
+        generateValue: true
